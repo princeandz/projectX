@@ -1,6 +1,5 @@
 /* General Styles */
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -38,7 +37,7 @@ nav a:hover {
 }
 
 /* Home Box Styles */
-.home-box {
+.home-box, .register-box, .login-box, #task-form-container, #feedback-form-container {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -46,7 +45,7 @@ nav a:hover {
     max-width: 400px;
     width: 100%;
     text-align: center;
-    margin: 40px auto;  /* This will center the home-box */
+    margin: 40px auto;
 }
 
 h2 {
@@ -59,30 +58,9 @@ p {
     color: #555;
     margin-bottom: 20px;
 }
-.register-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    margin: 40px auto;  /* This will center the register-box */
-}
-/* Login Box Styles */
-.login-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    margin: 40px auto;  /* This will center the login-box */
-}
 
-/* Button Styling for Login and Register */
-.btn-login, .btn-register, .btn-logout{
+/* Button Styling */
+button, .btn-login, .btn-register, .btn-logout, .btn-submit, #task-form button, #task-table .btn-edit, #task-table .btn-delete {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -94,25 +72,15 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.btn-login:hover, .btn-register:hover {
+button:hover, .btn-login:hover, .btn-register:hover, .btn-logout:hover, .btn-submit:hover, #task-form button:hover, #task-table .btn-edit:hover, #task-table .btn-delete:hover {
     background-color: #45a049;
 }
-/* Form and Task Box Styles */
-#task-form-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    margin: 40px auto;
-    text-align: center;
-}
 
+/* Form and Task Box Styles */
 #task-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0px;
 }
 
 #task-form input {
@@ -120,21 +88,6 @@ p {
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-#task-form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-#task-form button:hover {
-    background-color: #45a049;
 }
 
 /* Table Styles */
@@ -167,22 +120,31 @@ p {
     background-color: #ddd;
 }
 
-/* Button Styling for Table Actions */
-#task-table .btn-edit, 
-#task-table .btn-delete {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Feedback Form Styles */
+#feedback-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-#task-table .btn-edit:hover,
-#task-table .btn-delete:hover {
-    background-color: #45a049;
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+textarea {
+    width: 100%; /* or specify a specific width like 500px */
+    height: 150px; /* or specify a specific height like 150px */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 /* Footer Styling */
 footer {
@@ -217,10 +179,9 @@ footer a:hover {
         text-align: left;
     }
 
-    /* Adjusting Login Box for Small Screens */
-    .login-box {
+    /* Adjusting Box Styles for Small Screens */
+    .home-box, .register-box, .login-box, #task-form-container, #feedback-form-container {
         padding: 20px;
         width: 80%;
     }
 }
-

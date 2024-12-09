@@ -11,30 +11,29 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 ?>
 
-
 <!-- Task Form Box -->
 <div id="task-form-container">
-    
-
     <form id="task-form">
         <h2>Add a Task</h2>
-        <label for="title">Title:</label>
+        <label for="title">Title</label>
         <input type="text" id="title" required><br>
-        <label for="description">Description:</label>
+        <label for="description">Description</label>
         <input type="text" id="description" required><br>
-        <label for="due_date">Due Date:</label>
+        <label for="due_date">Due Date</label>
         <input type="date" id="due_date" required><br>
         <button type="submit">Add Task</button>
     </form>
 </div>
+
 <h2>Your Tasks</h2>
+
 <!-- Task Table -->
 <table id="task-table">
     <thead>
         <tr>
             <th>Title</th>
             <th>Description</th>
-            <th>Due Date</th>
+            <th id="due-date-header" style="cursor: pointer;">Due Date</th> <!-- Make this clickable -->
             <th>Status</th>
             <th>Actions</th>
         </tr>

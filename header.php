@@ -15,6 +15,7 @@
         <nav>
             <a href="index.php">Home</a>
             <a href="tasks.php">Tasks</a>
+            <a href="feedback.php">Feedback</a> 
             <a href="logout.php">Logout</a>
         </nav>
     </header>

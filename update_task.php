@@ -4,7 +4,7 @@ session_start();
 
 $user_id = $_SESSION['user_id'];
 
-// Add Task
+// Handle Add Task
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -14,7 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
 }
 
-// Read Tasks
-$result = $conn->query("SELECT * FROM tasks WHERE user_id = '$user_id'");
+// Handle Sorting and Fetch Tasks
+$sort_order = isset($_GET['sort_order']) ? $_GET['sort_order'] : 'asc'; // Default to 'asc'
+$order = ($sort_order === 'desc') ? 'DESC' : 'ASC';
+
+// Fetch tasks with sorting by due date
+$sql = "SELECT * FROM tasks WHERE user_id = '$user_id' ORDER BY due_date $order";
+$result = $conn->query($sql);
+
+// Output tasks as JSON
 echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 ?>
