@@ -3,6 +3,7 @@ CREATE TABLE users (
     username VARCHAR(50),
     email VARCHAR(100),
     password VARCHAR(255),
+    remember_token VARCHAR(255) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

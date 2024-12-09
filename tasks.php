@@ -1,7 +1,10 @@
 <?php
 include 'db.php';
 include 'header.php';
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -42,6 +45,20 @@ $user_id = $_SESSION['user_id'];
         <!-- Rows will be dynamically added here -->
     </tbody>
 </table>
+
+<!-- Buttons for CSV Import and Export -->
+<div style="margin-bottom: 10px;">
+    <button class="small-button" onclick="window.location.href='download_tasks.php'">
+        Download Tasks as CSV
+    </button>
+</div>
+
+<form action="upload_tasks.php" method="POST" enctype="multipart/form-data" class="upload-form">
+    <button type="submit" class="small-button">
+        Upload Tasks from CSV
+    </button>
+    <input type="file" name="task_csv" accept=".csv" required>
+</form>
 
 <script src="scripts/main.js"></script>
 

@@ -25,6 +25,27 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleSortOrder(); // Toggle the sort order
         loadTasks(); // Reload tasks with updated order
     });
+
+    // Add event listener for CSV download button
+    document.getElementById("download-csv").addEventListener("click", () => {
+        window.location.href = "download_tasks.php";
+    });
+
+    // Add event listener for CSV upload form submission
+    document.getElementById("upload-csv-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch("upload_tasks.php", {
+            method: "POST",
+            body: formData
+        }).then(response => response.text())
+          .then(result => {
+              alert(result); // Display success or error message
+              loadTasks(); // Reload tasks after upload
+          });
+    });
 });
 
 // Variable to store current sort order (ascending/descending)
@@ -64,4 +85,5 @@ function deleteTask(taskId) {
         body: `task_id=${taskId}`
     }).then(() => loadTasks());
 }
+
 

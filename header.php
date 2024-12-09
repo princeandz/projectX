@@ -10,6 +10,7 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
+            <img src="https://i.ibb.co/SsRjty3/your-image.png" alt="Task Organizer Logo" class="logo-image">
             <h1>Task Organizer</h1>
         </div>
         <nav>

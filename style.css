@@ -76,6 +76,27 @@ button:hover, .btn-login:hover, .btn-register:hover, .btn-logout:hover, .btn-sub
     background-color: #45a049;
 }
 
+.small-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    width: auto;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.upload-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+}
+
+.upload-form input[type="file"] {
+    width: auto;
+}
+
+
+
 /* Form and Task Box Styles */
 #task-form {
     display: flex;
@@ -184,4 +205,16 @@ footer a:hover {
         padding: 20px;
         width: 80%;
     }
+}
+
+/* Styling the logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Space between the image and the text */
 }
