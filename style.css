@@ -1,24 +1,4 @@
-
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-button {
-    padding: 5px 10px;
-}
-
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -28,20 +8,37 @@ button {
 
 body {
     background-color: #f4f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.container {
+/* Navigation Styles */
+nav {
+    background-color: #4CAF50;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
 }
 
-.login-box {
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+
+/* Home Box Styles */
+.home-box {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -49,6 +46,7 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    margin: 40px auto;  /* This will center the home-box */
 }
 
 h2 {
@@ -60,31 +58,42 @@ p {
     color: #555;
     margin-bottom: 20px;
 }
-
-/* Link Styling */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+.register-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;  /* This will center the register-box */
+}
+/* Login Box Styles */
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;  /* This will center the login-box */
 }
 
-a:hover {
-    color: #45a049;
-}
-
-/* Button Styling */
-.btn-login, .btn-register, .btn-logout {
+/* Button Styling for Login and Register */
+.btn-login, .btn-register, .btn-logout{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     margin: 10px 0;
-    display: inline-block;
+    width: 100%;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.btn-login:hover, .btn-register:hover, .btn-logout:hover {
+.btn-login:hover, .btn-register:hover {
     background-color: #45a049;
 }
 
@@ -103,3 +112,28 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Adjusting Navigation for Small Screens */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav a {
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Adjusting Login Box for Small Screens */
+    .login-box {
+        padding: 20px;
+        width: 80%;
+    }
+}
+

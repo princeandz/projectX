@@ -18,16 +18,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit();
     } else {
-        echo "Invalid credentials!";
+        echo "<p style='color:red; text-align:center;'>Invalid credentials!</p>";
     }
 }
 ?>
 
-<h2>Login</h2>
-<form method="POST">
-    Email: <input type="email" name="email" required><br>
-    Password: <input type="password" name="password" required><br>
-    <input type="submit" value="Login">
-</form>
+<div class="content">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-input" type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-input" type="password" name="password" id="password" required>
+            </div>
+            <input class="btn-login" type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="register.php" class="btn-register">Register</a></p>
+    </div>
+</div>
 
 <?php include 'footer.php'; ?>
+

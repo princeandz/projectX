@@ -14,7 +14,7 @@ session_start();
 <body>
 
     <div class="container">
-        <div class="login-box">
+        <div class="home-box">
             <h2>Welcome to the Task Organizer</h2>
 
             <?php if (isset($_SESSION['user_id'])): ?>
