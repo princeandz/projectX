@@ -11,16 +11,25 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 ?>
 
+
+<!-- Task Form Box -->
+<div id="task-form-container">
+    
+
+    <form id="task-form">
+        <h2>Add a Task</h2>
+        <label for="title">Title:</label>
+        <input type="text" id="title" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" required><br>
+        <label for="due_date">Due Date:</label>
+        <input type="date" id="due_date" required><br>
+        <button type="submit">Add Task</button>
+    </form>
+</div>
 <h2>Your Tasks</h2>
-
-<form id="task-form">
-    Title: <input type="text" id="title" required><br>
-    Description: <input type="text" id="description" required><br>
-    Due Date: <input type="date" id="due_date" required><br>
-    <button type="submit">Add Task</button>
-</form>
-
-<table border="1" id="task-table">
+<!-- Task Table -->
+<table id="task-table">
     <thead>
         <tr>
             <th>Title</th>
@@ -30,7 +39,9 @@ $user_id = $_SESSION['user_id'];
             <th>Actions</th>
         </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+        <!-- Rows will be dynamically added here -->
+    </tbody>
 </table>
 
 <script src="scripts/main.js"></script>

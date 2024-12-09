@@ -52,6 +52,7 @@ nav a:hover {
 h2 {
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 p {
@@ -96,7 +97,93 @@ p {
 .btn-login:hover, .btn-register:hover {
     background-color: #45a049;
 }
+/* Form and Task Box Styles */
+#task-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
 
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#task-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#task-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#task-form button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styles */
+#task-table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#task-table th,
+#task-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#task-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#task-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#task-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Button Styling for Table Actions */
+#task-table .btn-edit, 
+#task-table .btn-delete {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#task-table .btn-edit:hover,
+#task-table .btn-delete:hover {
+    background-color: #45a049;
+}
 /* Footer Styling */
 footer {
     text-align: center;
