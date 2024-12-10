@@ -46,11 +46,32 @@ $user_id = $_SESSION['user_id'];
 </table>
 
 <!-- Buttons for CSV Import and Export -->
-<div style="margin-bottom: 10px;">
-    <button class="small-button" onclick="window.location.href='download_tasks.php'">
-        Download Tasks as CSV
-    </button>
-</div>
+<h3>Filter Tasks for CSV Download</h3>
+<form action="download_tasks.php" method="GET" style="margin-bottom: 20px;">
+    <div style="margin-bottom: 10px;">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="end_date" style="margin-left: 20px;">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="">All</option>
+            <option value="Pending">Pending</option>
+            <option value="Done">Done</option>
+        </select>
+    </div>
+
+    <div style="margin-bottom: 10px;">
+        <button type="submit" class="small-button">
+            Download Tasks as CSV
+        </button>
+    </div>
+</form>
+
 
 <form action="upload_tasks.php" method="POST" enctype="multipart/form-data" class="upload-form">
     <button type="submit" class="small-button">
