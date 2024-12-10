@@ -49,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-input" type="password" name="password" id="password" required>
-                <small>Password must be at least 8 characters long, with at least one uppercase letter, one digit, and one symbol.</small>
             </div>
             <div class="form-group">
                 <label>
