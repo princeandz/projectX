@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags for SEO and Information -->
+    <meta name="author" content="Dominykas Abaravicius, Karlis Eglitis, Suryansh Jha, Andrej Ignjatovic">
+    <meta name="keywords" content="Task Organizer, To-Do List, Productivity, Project Management, Task Management">
+    <meta name="description" content="A task organizer to help manage and track your tasks efficiently.">
+    <meta name="creation_date" content="2024-12-01">
+    <meta name="expiry_date" content="2025-06-01">
+    <meta name="organizer" content="index, follow">
+    <meta http-equiv="Content-Language" content="en">
+    
     <link rel="stylesheet" href="style.css">
     <title>Task Organizer</title>
 </head>
