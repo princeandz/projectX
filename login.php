@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="content">
     <div class="login-box">
         <h2>Login</h2>
-        <form method="POST">
+        <form method="POST" onsubmit="return validatePassword()">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input class="form-input" type="email" name="email" id="email" required>
@@ -49,6 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-input" type="password" name="password" id="password" required>
+                <small>Password must be at least 8 characters long, with at least one uppercase letter, one digit, and one symbol.</small>
             </div>
             <div class="form-group">
                 <label>
@@ -61,6 +62,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
+<script>
+function validatePassword() {
+    const password = document.getElementById('password').value;
+    const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!passwordPattern.test(password)) {
+        alert('Password must be at least 8 characters long, with at least one uppercase letter, one digit, and one symbol.');
+        return false;
+    }
+    return true;
+}
+</script>
+
 <?php include 'footer.php'; ?>
+
 
 
